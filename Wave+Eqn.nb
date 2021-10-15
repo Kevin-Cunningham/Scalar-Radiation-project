@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     36288,       1059]
-NotebookOptionsPosition[     34640,       1028]
-NotebookOutlinePosition[     35043,       1044]
-CellTagsIndexPosition[     35000,       1041]
+NotebookDataLength[     36572,       1066]
+NotebookOptionsPosition[     34829,       1034]
+NotebookOutlinePosition[     35232,       1050]
+CellTagsIndexPosition[     35189,       1047]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1024,7 +1024,13 @@ Cell[TextData[{
   3.8432828327814674`*^9}, {3.843282881136888*^9, 3.843282947043604*^9}, {
   3.8432831811510973`*^9, 
   3.8432831856283407`*^9}},ExpressionUUID->"4bab1398-bd31-49be-a440-\
-0f954a5a707c"]
+0f954a5a707c"],
+
+Cell[BoxData[
+ RowBox[{"Quick", " ", "edit"}]], "Input",
+ CellChangeTimes->{{3.8432839038250093`*^9, 
+  3.8432839064947147`*^9}},ExpressionUUID->"5603a732-4743-49de-8228-\
+9cdad5b675e5"]
 },
 WindowSize->{960, 484},
 WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
@@ -1060,7 +1066,8 @@ Cell[24430, 732, 1565, 40, 31, "Input",ExpressionUUID->"fd894060-e429-40d4-96a6-
 Cell[25998, 774, 1977, 57, 60, "Output",ExpressionUUID->"dd822e49-fecd-4867-87f2-7e67cefed910"]
 }, Open  ]],
 Cell[27990, 834, 4197, 120, 76, "Text",ExpressionUUID->"fd9f5a83-be32-4104-a213-cd78ba7e8659"],
-Cell[32190, 956, 2446, 70, 86, "Text",ExpressionUUID->"4bab1398-bd31-49be-a440-0f954a5a707c"]
+Cell[32190, 956, 2446, 70, 86, "Text",ExpressionUUID->"4bab1398-bd31-49be-a440-0f954a5a707c"],
+Cell[34639, 1028, 186, 4, 28, "Input",ExpressionUUID->"5603a732-4743-49de-8228-9cdad5b675e5"]
 }
 ]
 *)
