@@ -1,0 +1,2944 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    143965,       2934]
+NotebookOptionsPosition[    141642,       2888]
+NotebookOutlinePosition[    142045,       2904]
+CellTagsIndexPosition[    142002,       2901]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  SubscriptBox["r", "out"], TraditionalForm]],
+ FormatType->
+  "TraditionalForm",ExpressionUUID->"0618fd74-4da6-4dff-9cdb-8609049ccd23"]], \
+"Title",
+ CellChangeTimes->{{3.844247694482169*^9, 
+  3.84424769654105*^9}},ExpressionUUID->"dfc09d30-3028-41a5-8648-\
+76f521d576d6"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"r1", "[", "x_", "]"}], ":=", 
+  RowBox[{"1", "-", 
+   RowBox[{"2", "M", " ", "x"}], "+", 
+   RowBox[{
+    SuperscriptBox["a", "2"], 
+    SuperscriptBox["x", "2"]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", "M", " ", 
+       SuperscriptBox["x", "2"]}], "-", 
+      RowBox[{"2", 
+       SuperscriptBox["a", "2"], 
+       SuperscriptBox["x", "3"]}]}], ")"}], 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      RowBox[{"2", "M", " ", "x"}], "+", 
+      RowBox[{
+       SuperscriptBox["a", "2"], 
+       SuperscriptBox["x", "2"]}]}], ")"}]}], "//", 
+   "Expand"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"W", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox["r", "2"], "+", 
+            SuperscriptBox["a", "2"]}], ")"}], "\[Omega]"}], "-", 
+         RowBox[{"a", " ", "m"}]}], 
+        SuperscriptBox["r", "2"]], ")"}], "2"], "-", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["r", "2"], "-", 
+        RowBox[{"2", "M", " ", "r"}], "+", 
+        SuperscriptBox["a", "2"]}], 
+       SuperscriptBox["r", "4"]], 
+      RowBox[{"(", 
+       RowBox[{"\[Lambda]", "-", 
+        RowBox[{"2", "a", " ", "m", " ", "\[Omega]"}], "+", 
+        RowBox[{
+         SuperscriptBox["a", 
+          RowBox[{"2", " "}]], 
+         SuperscriptBox["\[Omega]", "2"]}], "+", 
+        FractionBox[
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"M", " ", "r"}], "-", 
+            SuperscriptBox["a", "2"]}], ")"}]}], 
+         SuperscriptBox["r", "2"]]}], ")"}]}]}], "/.", 
+    RowBox[{"{", 
+     RowBox[{"r", "\[Rule]", 
+      FractionBox["1", "x"]}], "}"}]}], "//", "Expand"}]}]}], "Input",
+ CellChangeTimes->{{3.844230176008639*^9, 3.844230287447407*^9}, {
+  3.844230339719881*^9, 3.8442303874413834`*^9}, {3.8442310587317605`*^9, 
+  3.844231180569004*^9}, {3.844231439239083*^9, 3.844231444424881*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"180317a5-e365-42ad-a162-a814f2135b30"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CoefficientList", "[", 
+  RowBox[{
+   RowBox[{"W", "[", "x", "]"}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8442311613436384`*^9, 3.8442311836446304`*^9}, {
+  3.844231283828842*^9, 3.8442312909891415`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"6ca30c23-158e-4940-8716-61f14ed8d742"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SuperscriptBox["\[Omega]", "2"], ",", "0", ",", 
+   RowBox[{
+    RowBox[{"-", "\[Lambda]"}], "+", 
+    RowBox[{
+     SuperscriptBox["a", "2"], " ", 
+     SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "2"}], " ", "M"}], "+", 
+    RowBox[{"2", " ", "M", " ", "\[Lambda]"}], "-", 
+    RowBox[{"4", " ", "a", " ", "m", " ", "M", " ", "\[Omega]"}], "+", 
+    RowBox[{"2", " ", 
+     SuperscriptBox["a", "2"], " ", "M", " ", 
+     SuperscriptBox["\[Omega]", "2"]}]}], ",", 
+   RowBox[{
+    RowBox[{"2", " ", 
+     SuperscriptBox["a", "2"]}], "+", 
+    RowBox[{
+     SuperscriptBox["a", "2"], " ", 
+     SuperscriptBox["m", "2"]}], "+", 
+    RowBox[{"4", " ", 
+     SuperscriptBox["M", "2"]}], "-", 
+    RowBox[{
+     SuperscriptBox["a", "2"], " ", "\[Lambda]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "6"}], " ", 
+    SuperscriptBox["a", "2"], " ", "M"}], ",", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["a", "4"]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.844231162703787*^9, 3.8442311839467125`*^9}, {
+   3.8442312885588408`*^9, 3.844231291240339*^9}, 3.8442512220482955`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"321fa4d2-e37b-40d2-bfb5-c54f5b0bdf68"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "k", "]"}], "\n", 
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"coeffsoverxk", "=", 
+    RowBox[{"CoefficientList", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"k", 
+         RowBox[{"(", 
+          RowBox[{"k", "+", "1"}], ")"}], 
+         SuperscriptBox[
+          RowBox[{"r1", "[", "x", "]"}], "2"], 
+         SuperscriptBox["x", "2"]}], "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", "\[ImaginaryI]", " ", "\[Omega]", " ", "k", " ", 
+            RowBox[{"r1", "[", "x", "]"}]}], "+", 
+           RowBox[{"k", " ", 
+            RowBox[{"r2", "[", "x", "]"}]}]}], ")"}], 
+         SuperscriptBox["x", "1"]}], "+", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"W", "[", "x", "]"}], "-", 
+          SuperscriptBox["\[Omega]", "2"]}], ")"}]}], "//", "Expand"}], ",", 
+      "x"}], "]"}]}], ")"}], "//", "MatrixForm"}]}], "Input",
+ CellChangeTimes->{{3.8442468225080714`*^9, 3.8442468243109016`*^9}, {
+   3.8442469063702407`*^9, 3.8442469454703045`*^9}, 3.844247072120145*^9},
+ CellLabel->"In[5]:=",ExpressionUUID->"592dec14-efe2-4fed-bd8b-aa3c68c6fdbc"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {"0"},
+      {
+       RowBox[{
+        RowBox[{"-", "2"}], " ", "\[ImaginaryI]", " ", "k", " ", "\[Omega]"}]},
+      {
+       RowBox[{"k", "+", 
+        SuperscriptBox["k", "2"], "-", "\[Lambda]", "+", 
+        RowBox[{
+        "4", " ", "\[ImaginaryI]", " ", "k", " ", "M", " ", "\[Omega]"}], "+", 
+        RowBox[{
+         SuperscriptBox["a", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}]},
+      {
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "2"}], " ", "M"}], "-", 
+        RowBox[{"6", " ", "k", " ", "M"}], "-", 
+        RowBox[{"4", " ", 
+         SuperscriptBox["k", "2"], " ", "M"}], "+", 
+        RowBox[{"2", " ", "M", " ", "\[Lambda]"}], "-", 
+        RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+         SuperscriptBox["a", "2"], " ", "k", " ", "\[Omega]"}], "-", 
+        RowBox[{"4", " ", "a", " ", "m", " ", "M", " ", "\[Omega]"}], "+", 
+        RowBox[{"2", " ", 
+         SuperscriptBox["a", "2"], " ", "M", " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}]},
+      {
+       RowBox[{
+        RowBox[{"2", " ", 
+         SuperscriptBox["a", "2"]}], "+", 
+        RowBox[{"4", " ", 
+         SuperscriptBox["a", "2"], " ", "k"}], "+", 
+        RowBox[{"2", " ", 
+         SuperscriptBox["a", "2"], " ", 
+         SuperscriptBox["k", "2"]}], "+", 
+        RowBox[{
+         SuperscriptBox["a", "2"], " ", 
+         SuperscriptBox["m", "2"]}], "+", 
+        RowBox[{"4", " ", 
+         SuperscriptBox["M", "2"]}], "+", 
+        RowBox[{"8", " ", "k", " ", 
+         SuperscriptBox["M", "2"]}], "+", 
+        RowBox[{"4", " ", 
+         SuperscriptBox["k", "2"], " ", 
+         SuperscriptBox["M", "2"]}], "-", 
+        RowBox[{
+         SuperscriptBox["a", "2"], " ", "\[Lambda]"}]}]},
+      {
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "6"}], " ", 
+         SuperscriptBox["a", "2"], " ", "M"}], "-", 
+        RowBox[{"10", " ", 
+         SuperscriptBox["a", "2"], " ", "k", " ", "M"}], "-", 
+        RowBox[{"4", " ", 
+         SuperscriptBox["a", "2"], " ", 
+         SuperscriptBox["k", "2"], " ", "M"}]}]},
+      {
+       RowBox[{
+        RowBox[{"2", " ", 
+         SuperscriptBox["a", "4"]}], "+", 
+        RowBox[{"3", " ", 
+         SuperscriptBox["a", "4"], " ", "k"}], "+", 
+        RowBox[{
+         SuperscriptBox["a", "4"], " ", 
+         SuperscriptBox["k", "2"]}]}]}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    Column], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.844246911552586*^9, 3.8442469459871483`*^9}, {
+   3.844247061936883*^9, 3.844247073082246*^9}, 3.84425122214124*^9},
+ CellLabel->
+  "Out[6]//MatrixForm=",ExpressionUUID->"52293305-e161-432d-b08e-\
+d0f802aad1da"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f0", "[", "n_", "]"}], ":=", " ", 
+  RowBox[{
+   RowBox[{"-", "2"}], " ", "\[ImaginaryI]", " ", "n", " ", 
+   "\[Omega]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"f1", "[", "n_", "]"}], ":=", 
+  RowBox[{
+   SuperscriptBox["n", "2"], "-", "\[Lambda]", "+", 
+   RowBox[{"\[Omega]", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "4"}], " ", "\[ImaginaryI]", " ", "M"}], "+", 
+      RowBox[{
+       SuperscriptBox["a", "2"], " ", "\[Omega]"}]}], ")"}]}], "+", 
+   RowBox[{"n", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      RowBox[{"4", " ", "\[ImaginaryI]", " ", "M", " ", "\[Omega]"}]}], 
+     ")"}]}]}]}], "\n", 
+ RowBox[{
+  RowBox[{"f2", "[", "n_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "2"}], " ", "\[ImaginaryI]", " ", 
+    SuperscriptBox["a", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "2"}], "+", "n"}], ")"}], " ", "\[Omega]"}], "+", 
+   RowBox[{"2", " ", "M", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "3"}], "+", 
+      RowBox[{"5", " ", "n"}], "-", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["n", "2"]}], "+", "\[Lambda]", "-", 
+      RowBox[{"2", " ", "a", " ", "m", " ", "\[Omega]"}], "+", 
+      RowBox[{
+       SuperscriptBox["a", "2"], " ", 
+       SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}]}], "\n", 
+ RowBox[{
+  RowBox[{"f3", "[", "n_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"4", " ", 
+    SuperscriptBox["M", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "2"}], "+", "n"}], ")"}], "2"]}], "+", 
+   RowBox[{
+    SuperscriptBox["a", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{"8", "+", 
+      SuperscriptBox["m", "2"], "-", 
+      RowBox[{"8", " ", "n"}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["n", "2"]}], "-", "\[Lambda]"}], ")"}]}]}]}], "\n", 
+ RowBox[{
+  RowBox[{"f4", "[", "n_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"-", "2"}], " ", 
+   SuperscriptBox["a", "2"], " ", "M", " ", 
+   RowBox[{"(", 
+    RowBox[{"15", "-", 
+     RowBox[{"11", " ", "n"}], "+", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["n", "2"]}]}], ")"}]}]}], "\n", 
+ RowBox[{
+  RowBox[{"f5", "[", "n_", "]"}], ":=", 
+  RowBox[{
+   SuperscriptBox["a", "4"], " ", 
+   RowBox[{"(", 
+    RowBox[{"12", "-", 
+     RowBox[{"7", " ", "n"}], "+", 
+     SuperscriptBox["n", "2"]}], ")"}]}]}], "\n", 
+ RowBox[{
+  RowBox[{"fi", "[", "n_", "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"f0", "[", "n", "]"}], ",", 
+    RowBox[{"f1", "[", "n", "]"}], ",", 
+    RowBox[{"f2", "[", "n", "]"}], ",", 
+    RowBox[{"f3", "[", "n", "]"}], ",", 
+    RowBox[{"f4", "[", "n", "]"}], ",", 
+    RowBox[{"f5", "[", "n", "]"}]}], "}"}]}]}], "Input",
+ CellChangeTimes->{{3.8442346622427425`*^9, 3.8442347203497686`*^9}, {
+  3.844235426604083*^9, 3.8442354268398175`*^9}, {3.8442365090404105`*^9, 
+  3.8442365742372475`*^9}, {3.8442368608535657`*^9, 3.844236864414279*^9}, {
+  3.844246634003784*^9, 3.8442466522524357`*^9}, {3.844246773994512*^9, 
+  3.844246782958068*^9}, {3.844246840940624*^9, 3.844246885827647*^9}, {
+  3.8442470799094243`*^9, 3.8442470956714845`*^9}, {3.84424713542153*^9, 
+  3.8442472054955063`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"b231f3a5-5455-4100-9995-822fab092f2c"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"fi", "[", "k", "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"i", "+", "1"}], "]"}], "]"}], 
+      RowBox[{"c", "[", 
+       RowBox[{"k", "-", "i"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "0", ",", "5"}], "}"}]}], "]"}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.8442470928322783`*^9, 3.8442470928322783`*^9}, {
+  3.8442474616651697`*^9, 3.844247486500142*^9}, {3.844250842417815*^9, 
+  3.844250854430956*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"d57fafc5-f3b1-4d6b-9db9-79e9e85a63d8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", "=", ".9"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Lambda]", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Omega]", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"m", "=", "2"}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{"RecurrenceTable", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["a", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{"12", "-", 
+          RowBox[{"7", " ", "k"}], "+", 
+          SuperscriptBox["k", "2"]}], ")"}], " ", 
+        RowBox[{"c", "[", 
+         RowBox[{
+          RowBox[{"-", "5"}], "+", "k"}], "]"}]}], "-", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["a", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"15", "-", 
+          RowBox[{"11", " ", "k"}], "+", 
+          RowBox[{"2", " ", 
+           SuperscriptBox["k", "2"]}]}], ")"}], " ", "M", " ", 
+        RowBox[{"c", "[", 
+         RowBox[{
+          RowBox[{"-", "4"}], "+", "k"}], "]"}]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"4", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "2"}], "+", "k"}], ")"}], "2"], " ", 
+           SuperscriptBox["M", "2"]}], "+", 
+          RowBox[{
+           SuperscriptBox["a", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{"8", "-", 
+             RowBox[{"8", " ", "k"}], "+", 
+             RowBox[{"2", " ", 
+              SuperscriptBox["k", "2"]}], "+", 
+             SuperscriptBox["m", "2"], "-", "\[Lambda]"}], ")"}]}]}], ")"}], 
+        " ", 
+        RowBox[{"c", "[", 
+         RowBox[{
+          RowBox[{"-", "3"}], "+", "k"}], "]"}]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "2"}], " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["a", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2"}], "+", "k"}], ")"}], " ", "\[Omega]"}], "+", 
+          RowBox[{"2", " ", "M", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "3"}], "+", 
+             RowBox[{"5", " ", "k"}], "-", 
+             RowBox[{"2", " ", 
+              SuperscriptBox["k", "2"]}], "+", "\[Lambda]", "-", 
+             RowBox[{"2", " ", "a", " ", "m", " ", "\[Omega]"}], "+", 
+             RowBox[{
+              SuperscriptBox["a", "2"], " ", 
+              SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}]}], ")"}], " ", 
+        RowBox[{"c", "[", 
+         RowBox[{
+          RowBox[{"-", "2"}], "+", "k"}], "]"}]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["k", "2"], "-", "\[Lambda]", "+", 
+          RowBox[{"\[Omega]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "4"}], " ", "\[ImaginaryI]", " ", "M"}], "+", 
+             RowBox[{
+              SuperscriptBox["a", "2"], " ", "\[Omega]"}]}], ")"}]}], "+", 
+          RowBox[{"k", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", "M", " ", "\[Omega]"}]}],
+             ")"}]}]}], ")"}], " ", 
+        RowBox[{"c", "[", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", "k"}], "]"}]}], "-", 
+       RowBox[{"2", " ", "\[ImaginaryI]", " ", "k", " ", "\[Omega]", " ", 
+        RowBox[{"c", "[", "k", "]"}]}]}], "\[Equal]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"c", "[", "0", "]"}], "\[Equal]", "1"}], ",", 
+     RowBox[{
+      RowBox[{"c", "[", 
+       RowBox[{"-", "1"}], "]"}], "\[Equal]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"c", "[", 
+       RowBox[{"-", "2"}], "]"}], "\[Equal]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"c", "[", 
+       RowBox[{"-", "3"}], "]"}], "\[Equal]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"c", "[", 
+       RowBox[{"-", "4"}], "]"}], "\[Equal]", "0"}]}], "}"}], ",", "c", ",", 
+   RowBox[{"{", 
+    RowBox[{"k", ",", "1", ",", "20"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8442472355596933`*^9, 3.8442472622089725`*^9}, {
+   3.8442473134155855`*^9, 3.8442473253701706`*^9}, {3.844247404083613*^9, 
+   3.8442474574664216`*^9}, 3.8442474994060054`*^9, {3.8442475360893717`*^9, 
+   3.8442475507082233`*^9}, {3.8442476572319717`*^9, 
+   3.8442476585477695`*^9}, {3.8442508641471043`*^9, 3.844250864922265*^9}, 
+   3.844251230240497*^9},
+ CellLabel->"In[22]:=",ExpressionUUID->"a9bbfa49-3571-4a3b-9362-3eb941f7b879"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"0.`", "\[VeryThinSpace]", "-", 
+    RowBox[{"1.0483333333333333`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.7242236111111111`"}], "-", 
+    RowBox[{"0.4633333333333334`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.29072777777777775`"}], "-", 
+    RowBox[{"0.2874662121913581`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.7738563967074974`"}], "-", 
+    RowBox[{"0.8762534768518517`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1.5326703893492792`"}], "+", 
+    RowBox[{"0.060481992643374366`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.1769925505928869`"}], "+", 
+    RowBox[{"0.13785232751997728`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "2.1251362587854996`"}], "-", 
+    RowBox[{"2.2297586477119222`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "5.236196047429152`"}], "+", 
+    RowBox[{"3.263180784212708`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{"7.12665103263158`", "\[VeryThinSpace]", "+", 
+    RowBox[{"2.761046897103953`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "10.083193314731227`"}], "-", 
+    RowBox[{"22.69675161684198`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "49.006763780983725`"}], "+", 
+    RowBox[{"45.556627816980836`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{"159.30739890962073`", "\[VeryThinSpace]", "+", 
+    RowBox[{"52.94434009993617`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "95.63419961872876`"}], "-", 
+    RowBox[{"491.64440486777755`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1249.7683427515897`"}], "+", 
+    RowBox[{"925.0535701309421`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{"4406.890012001359`", "\[VeryThinSpace]", "+", 
+    RowBox[{"2326.2869000201526`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{"766.4792520553431`", "\[VeryThinSpace]", "-", 
+    RowBox[{"16895.599694973982`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "55820.24213565534`"}], "+", 
+    RowBox[{"22238.80455498435`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{"158589.3562428652`", "\[VeryThinSpace]", "+", 
+    RowBox[{"156177.73487926243`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{"314062.0925384472`", "\[VeryThinSpace]", "-", 
+    RowBox[{"800283.1644200314`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3.454412335501905`*^6"}], "+", 
+    RowBox[{"67139.0246459499`", " ", "\[ImaginaryI]"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.8442371052921915`*^9, 3.8442371347832813`*^9}, 
+   3.844246555817461*^9, 3.8442466459359107`*^9, 3.8442472675892954`*^9, 
+   3.844247326953477*^9, {3.8442474044815397`*^9, 3.844247447290249*^9}, 
+   3.8442475007974157`*^9, {3.8442475414967337`*^9, 3.8442475513045774`*^9}, 
+   3.8442476589880114`*^9, {3.8442512274222975`*^9, 3.844251230637566*^9}},
+ CellLabel->"Out[27]=",ExpressionUUID->"b678e637-dc4b-4b7a-9edb-ddc4b1cb7641"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  SubscriptBox["r", "in"], TraditionalForm]],
+ FormatType->
+  "TraditionalForm",ExpressionUUID->"d3fac56c-40bb-4226-bfa9-f702819f400e"]], \
+"Subtitle",
+ CellChangeTimes->{{3.844247707593584*^9, 
+  3.8442477160937915`*^9}},ExpressionUUID->"95c23345-4577-4e6a-8cef-\
+6b5cc6da73cb"],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", 
+  RowBox[{
+  "a", ",", "M", ",", "m", ",", "\[Lambda]", ",", "\[Omega]", ",", "m", ",", 
+   "k", ",", "rp"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8442529588845778`*^9, 3.8442529593835154`*^9}},
+ CellLabel->"In[63]:=",ExpressionUUID->"29e2b8a6-79b4-4589-8a8d-8ce350241031"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"rp", " ", "=", " ", 
+    RowBox[{"M", "+", 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["M", "2"], "-", 
+       SuperscriptBox["a", "2"]}]]}]}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.8442518246975746`*^9, 3.844251833266305*^9}, {
+   3.844252272775584*^9, 3.8442522827363076`*^9}, {3.844252964688715*^9, 
+   3.8442529743502474`*^9}, {3.8442530072059517`*^9, 3.84425301037092*^9}, 
+   3.844253043433533*^9},
+ CellLabel->"In[73]:=",ExpressionUUID->"42dd32b0-b764-4639-ad30-8307ba320139"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"r1in", "[", "\[Delta]_", "]"}], ":=", 
+  RowBox[{"1", "-", 
+   FractionBox[
+    RowBox[{"2", "M"}], 
+    RowBox[{"\[Delta]", "+", "rp"}]], "+", 
+   FractionBox[
+    SuperscriptBox["a", "2"], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"\[Delta]", "+", "rp"}], ")"}], 
+     "2"]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2in", "[", "\[Delta]_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"2", "M", " "}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"\[Delta]", "+", "rp"}], ")"}], "2"]], "-", 
+     FractionBox[
+      RowBox[{"2", 
+       SuperscriptBox["a", "2"]}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"\[Delta]", "+", "rp"}], ")"}], "3"]]}], ")"}], 
+   RowBox[{"r1in", "[", "\[Delta]", "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.8442512390513024`*^9, 3.8442514063007975`*^9}, {
+  3.844251837285306*^9, 3.8442518709002724`*^9}, {3.844252286609812*^9, 
+  3.8442523281385155`*^9}},
+ CellLabel->"In[69]:=",ExpressionUUID->"ed7e64a4-6634-4565-a150-51a87bb39a73"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Win", "[", "\[Delta]_", "]"}], ":=", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"\[Delta]", "+", "rp"}], ")"}], "2"], "+", 
+          SuperscriptBox["a", "2"]}], ")"}], "\[Omega]"}], "-", 
+       RowBox[{"a", " ", "m"}]}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"\[Delta]", "+", "rp"}], ")"}], "2"]], ")"}], "2"], "-", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"\[Delta]", "+", "rp"}], ")"}], "2"], "-", 
+      RowBox[{"2", "M", " ", 
+       RowBox[{"(", 
+        RowBox[{"\[Delta]", "+", "rp"}], ")"}]}], "+", 
+      SuperscriptBox["a", "2"]}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"\[Delta]", "+", "rp"}], ")"}], "4"]], 
+    RowBox[{"(", 
+     RowBox[{"\[Lambda]", "-", 
+      RowBox[{"2", "a", " ", "m", " ", "\[Omega]"}], "+", 
+      RowBox[{
+       SuperscriptBox["a", 
+        RowBox[{"2", " "}]], 
+       SuperscriptBox["\[Omega]", "2"]}], "+", 
+      FractionBox[
+       RowBox[{"2", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"M", " ", 
+           RowBox[{"(", 
+            RowBox[{"\[Delta]", "+", "rp"}], ")"}]}], "-", 
+          SuperscriptBox["a", "2"]}], ")"}]}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"\[Delta]", "+", "rp"}], ")"}], "2"]]}], 
+     ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.8442506454453936`*^9, 3.8442506548201466`*^9}, {
+  3.844250783094449*^9, 3.844250783281949*^9}, {3.8442523420509815`*^9, 
+  3.844252372382578*^9}},
+ CellLabel->"In[71]:=",ExpressionUUID->"7bcb3525-bc93-4d70-b5d3-549ef000d6f9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"hold", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"D", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Exp", "[", 
+            RowBox[{
+             RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Gamma]", " ", "rs"}], 
+            "]"}], " ", "ck", " ", 
+           SuperscriptBox[
+            RowBox[{"\[Delta]", "[", "rs", "]"}], "k"]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"rs", ",", "2"}], "}"}]}], "]"}], "+", 
+        RowBox[{
+         RowBox[{"Win", "[", 
+          RowBox[{"\[Delta]", "[", "rs", "]"}], "]"}], 
+         RowBox[{"Exp", "[", 
+          RowBox[{
+           RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Gamma]", " ", "rs"}], 
+          "]"}], " ", "ck", " ", 
+         SuperscriptBox[
+          RowBox[{"\[Delta]", "[", "rs", "]"}], "k"]}]}], ")"}], "/", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Gamma]", " ", "rs"}], "]"}]}],
+      "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[Delta]", "[", "rs", "]"}], "\[Rule]", "\[Delta]"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[Delta]", "'"}], "[", "rs", "]"}], "\[Rule]", 
+        RowBox[{"r1in", "[", "\[Delta]", "]"}]}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[Delta]", "''"}], "[", "rs", "]"}], "\[Rule]", 
+        RowBox[{"r2in", "[", "\[Delta]", "]"}]}]}], "}"}]}], ")"}], "//", 
+   "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.844247797057832*^9, 3.8442478269777765`*^9}, {
+  3.844250541406627*^9, 3.8442506253565254`*^9}, {3.844250815832137*^9, 
+  3.844250827864589*^9}, {3.844250897826213*^9, 3.8442509356793804`*^9}, {
+  3.8442514296283145`*^9, 3.8442514520017953`*^9}, {3.8442517904043517`*^9, 
+  3.844251796007882*^9}, {3.844251889734491*^9, 3.844251970677118*^9}, {
+  3.8442523886694074`*^9, 3.844252439877575*^9}, {3.8442524748333974`*^9, 
+  3.844252481664223*^9}, {3.8442526019047155`*^9, 3.8442526167743683`*^9}, {
+  3.8442526631613874`*^9, 3.844252693238885*^9}, {3.8442528956721287`*^9, 
+  3.844252918564014*^9}},
+ CellLabel->"In[72]:=",ExpressionUUID->"e0676aff-6f0a-4a15-89e2-bcbdb72a9134"],
+
+Cell[BoxData[
+ RowBox[{"ck", " ", 
+  SuperscriptBox["\[Delta]", "k"], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", 
+     SuperscriptBox["\[Gamma]", "2"]}], "-", 
+    FractionBox[
+     RowBox[{"2", " ", "\[ImaginaryI]", " ", "k", " ", "\[Gamma]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", 
+         SqrtBox[
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["a", "2"]}], "+", 
+           SuperscriptBox["M", "2"]}]]}], "+", "\[Delta]"}], ")"}]}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"M", "+", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["a", "2"]}], "+", 
+          SuperscriptBox["M", "2"]}]], "+", "\[Delta]"}], ")"}], "2"]], "+", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "k"}], ")"}], " ", "k", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", " ", 
+          SqrtBox[
+           RowBox[{
+            RowBox[{"-", 
+             SuperscriptBox["a", "2"]}], "+", 
+            SuperscriptBox["M", "2"]}]]}], "+", "\[Delta]"}], ")"}], "2"]}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"M", "+", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["a", "2"]}], "+", 
+          SuperscriptBox["M", "2"]}]], "+", "\[Delta]"}], ")"}], "4"]], "+", 
+    FractionBox[
+     RowBox[{"2", " ", "k", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", 
+         SqrtBox[
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["a", "2"]}], "+", 
+           SuperscriptBox["M", "2"]}]]}], "+", "\[Delta]"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox["a", "2"]}], "+", 
+        RowBox[{"M", " ", 
+         RowBox[{"(", 
+          RowBox[{"M", "+", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["a", "2"]}], "+", 
+             SuperscriptBox["M", "2"]}]], "+", "\[Delta]"}], ")"}]}]}], 
+       ")"}]}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"M", "+", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["a", "2"]}], "+", 
+          SuperscriptBox["M", "2"]}]], "+", "\[Delta]"}], ")"}], "5"]], "+", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", " ", "m"}], "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["a", "2"], "+", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"M", "+", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{"-", 
+                 SuperscriptBox["a", "2"]}], "+", 
+                SuperscriptBox["M", "2"]}]], "+", "\[Delta]"}], ")"}], "2"]}],
+           ")"}], " ", "\[Omega]"}]}], ")"}], "2"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"M", "+", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["a", "2"]}], "+", 
+          SuperscriptBox["M", "2"]}]], "+", "\[Delta]"}], ")"}], "4"]], "-", 
+    FractionBox[
+     RowBox[{"\[Delta]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", 
+         SqrtBox[
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["a", "2"]}], "+", 
+           SuperscriptBox["M", "2"]}]]}], "+", "\[Delta]"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"2", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             SuperscriptBox["a", "2"]}], "+", 
+            RowBox[{"M", " ", 
+             RowBox[{"(", 
+              RowBox[{"M", "+", 
+               SqrtBox[
+                RowBox[{
+                 RowBox[{"-", 
+                  SuperscriptBox["a", "2"]}], "+", 
+                 SuperscriptBox["M", "2"]}]], "+", "\[Delta]"}], ")"}]}]}], 
+           ")"}]}], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"M", "+", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["a", "2"]}], "+", 
+              SuperscriptBox["M", "2"]}]], "+", "\[Delta]"}], ")"}], "2"]], 
+        "+", "\[Lambda]", "-", 
+        RowBox[{"2", " ", "a", " ", "m", " ", "\[Omega]"}], "+", 
+        RowBox[{
+         SuperscriptBox["a", "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], ")"}]}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"M", "+", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["a", "2"]}], "+", 
+          SuperscriptBox["M", "2"]}]], "+", "\[Delta]"}], ")"}], "4"]]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{{3.844252602445278*^9, 3.8442526171654854`*^9}, {
+  3.844252671182068*^9, 3.844252695322158*^9}, {3.844252901366197*^9, 
+  3.8442529201837654`*^9}, {3.844252987393946*^9, 3.8442530148279996`*^9}},
+ CellLabel->"Out[72]=",ExpressionUUID->"047ff58b-d45f-4739-b5c4-f15f0c48c300"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8442524844131765`*^9, 3.8442524906893735`*^9}, {
+  3.8442528798558865`*^9, 
+  3.844252887467193*^9}},ExpressionUUID->"bcfeb443-199c-4296-9a95-\
+29bf4052aca0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   FrameBox[GridBox[{
+      {
+       ItemBox[
+        TagBox[
+         RowBox[{
+          SuperscriptBox["\[Delta]", "k"], " ", 
+          RowBox[{"(", 
+           InterpretationBox[
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               FractionBox[
+                RowBox[{"4", " ", "ck", " ", 
+                 SuperscriptBox["k", "2"], " ", 
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", 
+                    SuperscriptBox["a", "2"]}], "+", 
+                    SuperscriptBox["M", "2"], "+", 
+                    RowBox[{"M", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    SuperscriptBox["a", "2"]}], "+", 
+                    SuperscriptBox["M", "2"]}]]}]}], ")"}], "2"]}], 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"M", "+", 
+                   SqrtBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    SuperscriptBox["a", "2"]}], "+", 
+                    SuperscriptBox["M", "2"]}]]}], ")"}], "6"]], "-", 
+               FractionBox[
+                RowBox[{"4", " ", "\[ImaginaryI]", " ", "ck", " ", "k", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", 
+                    SuperscriptBox["a", "2"]}], "+", 
+                   SuperscriptBox["M", "2"], "+", 
+                   RowBox[{"M", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    SuperscriptBox["a", "2"]}], "+", 
+                    SuperscriptBox["M", "2"]}]]}]}], ")"}], " ", "\[Gamma]"}], 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"M", "+", 
+                   SqrtBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    SuperscriptBox["a", "2"]}], "+", 
+                    SuperscriptBox["M", "2"]}]]}], ")"}], "3"]], "-", 
+               RowBox[{"ck", " ", 
+                SuperscriptBox["\[Gamma]", "2"]}], "+", 
+               FractionBox[
+                RowBox[{"ck", " ", 
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "a"}], " ", "m"}], "+", 
+                    RowBox[{"2", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["M", "2"], "+", 
+                    RowBox[{"M", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    SuperscriptBox["a", "2"]}], "+", 
+                    SuperscriptBox["M", "2"]}]]}]}], ")"}], " ", 
+                    "\[Omega]"}]}], ")"}], "2"]}], 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"M", "+", 
+                   SqrtBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    SuperscriptBox["a", "2"]}], "+", 
+                    SuperscriptBox["M", "2"]}]]}], ")"}], "4"]]}], ")"}], "+", 
+             TemplateBox[{"10"},
+              "OutputSizeLimit`Skeleton"], "+", 
+             InterpretationBox[
+              SuperscriptBox[
+               RowBox[{"O", "[", "\[Delta]", "]"}], "11"],
+              SeriesData[$CellContext`\[Delta], 0, {}, 0, 11, 1],
+              Editable->False]}],
+            
+            SeriesData[$CellContext`\[Delta], 0, {
+             4 $CellContext`ck $CellContext`k^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^
+                  Rational[
+                   1, 2])^(-6) (-$CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^2 + 
+              Complex[0, -4] $CellContext`ck $CellContext`k ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^
+                  Rational[
+                   1, 2])^(-3) (-$CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                  Rational[
+                   1, 2]) $CellContext`\[Gamma] - $CellContext`ck \
+$CellContext`\[Gamma]^2 + $CellContext`ck ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^
+                  Rational[1, 2])^(-4) (-$CellContext`a $CellContext`m + 
+                 2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2]) $CellContext`\[Omega])^2, (-2) $CellContext`ck \
+$CellContext`k (1 + 
+                2 $CellContext`k) ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^
+                  Rational[
+                   1, 2])^(-7) (-$CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                  Rational[1, 2]) ((-3) $CellContext`a^2 + 2 $CellContext`M^2 + 
+                2 $CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                  Rational[1, 2]) + 
+              Complex[0, -2] $CellContext`ck $CellContext`k (
+                3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-3)) $CellContext`\[Gamma] + $CellContext`ck \
+((-4) ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-5) (-$CellContext`a $CellContext`m + \
+$CellContext`a^2 $CellContext`\[Omega]) (-$CellContext`a $CellContext`m + 
+                  2 $CellContext`M^2 $CellContext`\[Omega] + 
+                  2 $CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2] $CellContext`\[Omega]) - 
+                2 (-$CellContext`a^2 + $CellContext`M^2)^
+                 Rational[
+                  1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) (
+                 2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-2) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])) + $CellContext`\[Lambda] - 
+                 2 $CellContext`a $CellContext`m $CellContext`\[Omega] + \
+$CellContext`a^2 $CellContext`\[Omega]^2)), $CellContext`ck $CellContext`k (
+                1 + $CellContext`k) ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) (25 $CellContext`a^4 - 
+                48 $CellContext`a^2 $CellContext`M^2 + 24 $CellContext`M^4 - 
+                36 $CellContext`a^2 $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2] + 
+                24 $CellContext`M^3 (-$CellContext`a^2 + $CellContext`M^2)^
+                  Rational[1, 2]) + 
+              Complex[0, -4] $CellContext`ck $CellContext`k ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^
+                  Rational[
+                   1, 2])^(-5) ((-2) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                  Rational[
+                   1, 2]) $CellContext`\[Gamma] + $CellContext`ck \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                  Rational[1, 2])^(-7) ((-16) $CellContext`a^2 $CellContext`M + 
+                10 $CellContext`a^2 $CellContext`m^2 $CellContext`M + 
+                16 $CellContext`M^3 - 
+                22 $CellContext`a^2 (-$CellContext`a^2 + $CellContext`M^2)^
+                 Rational[1, 2] + 
+                10 $CellContext`a^2 $CellContext`m^2 (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2] + 
+                16 $CellContext`M^2 (-$CellContext`a^2 + $CellContext`M^2)^
+                  Rational[1, 2] - 
+                13 $CellContext`a^2 $CellContext`M $CellContext`\[Lambda] + 
+                12 $CellContext`M^3 $CellContext`\[Lambda] - 
+                7 $CellContext`a^2 (-$CellContext`a^2 + $CellContext`M^2)^
+                 Rational[1, 2] $CellContext`\[Lambda] + 
+                12 $CellContext`M^2 (-$CellContext`a^2 + $CellContext`M^2)^
+                  Rational[1, 2] $CellContext`\[Lambda] + 
+                24 $CellContext`a^3 $CellContext`m $CellContext`M \
+$CellContext`\[Omega] - 
+                48 $CellContext`a $CellContext`m $CellContext`M^3 \
+$CellContext`\[Omega] - 
+                48 $CellContext`a $CellContext`m $CellContext`M^2 \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2] $CellContext`\[Omega] - 
+                21 $CellContext`a^4 $CellContext`M $CellContext`\[Omega]^2 + 
+                36 $CellContext`a^2 $CellContext`M^3 $CellContext`\[Omega]^2 - 
+                3 $CellContext`a^4 (-$CellContext`a^2 + $CellContext`M^2)^
+                 Rational[1, 2] $CellContext`\[Omega]^2 + 
+                36 $CellContext`a^2 $CellContext`M^2 (-$CellContext`a^2 + \
+$CellContext`M^2)^
+                  Rational[
+                   1, 2] $CellContext`\[Omega]^2), $CellContext`ck \
+($CellContext`k (((-4) $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) (
+                    6 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    4 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-3)) + ((-12) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    6 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + (
+                    20 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    8 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2)) + (
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-2))) + (-1 + $CellContext`k) $CellContext`k (
+                  2 ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + 
+                  2 (5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2)))) + 
+              Complex[0, -2] $CellContext`ck $CellContext`k (
+                5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-5)) $CellContext`\[Gamma] + $CellContext`ck (
+                4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-3) $CellContext`\[Omega]^2 + 
+                40 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-5) $CellContext`\[Omega] (-$CellContext`a \
+$CellContext`m + 
+                  2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2]) $CellContext`\[Omega]) - 
+                20 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[1, 2])^(-7) (-$CellContext`a $CellContext`m + 
+                  2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2]) $CellContext`\[Omega])^2 - 
+                8 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-5) (-$CellContext`a $CellContext`m $CellContext`\
+\[Omega] - 2 $CellContext`a^2 $CellContext`\[Omega]^2 + 
+                 6 $CellContext`M^2 $CellContext`\[Omega]^2 + 
+                 6 $CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[1, 2] $CellContext`\[Omega]^2) + 
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-8) (19 $CellContext`a^2 $CellContext`M - 
+                  20 $CellContext`M^3 + 
+                  36 $CellContext`a^2 (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2] - 
+                  20 $CellContext`M^2 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[1, 2] + 
+                  14 $CellContext`a^2 $CellContext`M $CellContext`\[Lambda] - 
+                  12 $CellContext`M^3 $CellContext`\[Lambda] + 
+                  8 $CellContext`a^2 (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2] $CellContext`\[Lambda] - 
+                  12 $CellContext`M^2 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[1, 2] $CellContext`\[Lambda] - 
+                  28 $CellContext`a^3 $CellContext`m $CellContext`M \
+$CellContext`\[Omega] + 
+                  24 $CellContext`a $CellContext`m $CellContext`M^3 \
+$CellContext`\[Omega] - 
+                  16 $CellContext`a^3 $CellContext`m (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2] $CellContext`\[Omega] + 
+                  24 $CellContext`a $CellContext`m $CellContext`M^2 \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2] $CellContext`\[Omega] + 
+                  14 $CellContext`a^4 $CellContext`M $CellContext`\[Omega]^2 - 
+                  12 $CellContext`a^2 $CellContext`M^3 \
+$CellContext`\[Omega]^2 + 
+                  8 $CellContext`a^4 (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2] $CellContext`\[Omega]^2 - 
+                  12 $CellContext`a^2 $CellContext`M^2 (-$CellContext`a^2 + \
+$CellContext`M^2)^
+                   Rational[
+                    1, 2] $CellContext`\[Omega]^2)), $CellContext`ck ((-1 + \
+$CellContext`k) $CellContext`k (((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4))^2 + 
+                  2 (5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + 
+                  2 ((-6) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-6)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-2))) + $CellContext`k (((-4) $CellContext`a^2 \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-4)) ((-12) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    6 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + (
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5)) (
+                    6 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    4 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + (
+                    20 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    8 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-3)) + ((-6) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-6)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-2)) + ((-30) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    10 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-6)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2)))) + 
+              Complex[0, -2] $CellContext`ck $CellContext`k ((-6) \
+$CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-7) + 
+                2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-6)) $CellContext`\[Gamma] + $CellContext`ck (
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-3) ((-2) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]) (
+                  20 (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                  4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-5)) - 
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-4) ((-3) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2]) ((-8) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5) + ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) - 
+                4 (-$CellContext`a^2 + $CellContext`M^2)^
+                 Rational[
+                  1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) (
+                 3 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-5) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                15 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[1, 2])^(-4) $CellContext`\[Omega]^2 - 
+                80 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-6) $CellContext`\[Omega] (-$CellContext`a \
+$CellContext`m + 
+                 2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2]) $CellContext`\[Omega]) + 
+                35 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-8) (-$CellContext`a $CellContext`m + 
+                   2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2]) $CellContext`\[Omega])^2 - ((-40) \
+(-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7) + 
+                 10 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-6)) (
+                 2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-2) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])) + $CellContext`\[Lambda] - 
+                 2 $CellContext`a $CellContext`m $CellContext`\[Omega] + \
+$CellContext`a^2 $CellContext`\[Omega]^2) + 
+                20 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-6) (-$CellContext`a $CellContext`m $CellContext`\
+\[Omega] - 2 $CellContext`a^2 $CellContext`\[Omega]^2 + 
+                  6 $CellContext`M^2 $CellContext`\[Omega]^2 + 
+                  6 $CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2] $CellContext`\[Omega]^2)), $CellContext`ck \
+($CellContext`k ((
+                    20 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    8 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5)) ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + (
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5)) ((-12) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    6 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-4)) + ((-6) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6)) (
+                    6 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    4 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-3)) + ((-30) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    10 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + (
+                    42 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    12 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-7)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2)) + (
+                    7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-7)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-2))) + (-1 + $CellContext`k) $CellContext`k (
+                  2 (5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5)) ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + 
+                  2 ((-6) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + 
+                  2 (7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-7)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2)))) + 
+              Complex[0, -2] $CellContext`ck $CellContext`k (
+                7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-7)) $CellContext`\[Gamma] + $CellContext`ck (
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-3) ((-2) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2]) ((-40) (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7) + 
+                  10 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-6)) - 
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-4) ((-3) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]) (
+                 20 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-5)) - 
+                4 (-$CellContext`a^2 + $CellContext`M^2)^
+                 Rational[
+                  1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-4) ((-4) $CellContext`M ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                 5 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-6) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 ((-8) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5) + ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) (
+                 
+                 3 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-5) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) + 
+                36 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-5) $CellContext`\[Omega]^2 + 
+                140 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-7) $CellContext`\[Omega] (-$CellContext`a \
+$CellContext`m + 
+                  2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2]) $CellContext`\[Omega]) - 
+                56 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[1, 2])^(-9) (-$CellContext`a $CellContext`m + 
+                  2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2]) $CellContext`\[Omega])^2 - (
+                 70 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                 20 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-7)) (
+                 2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-2) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])) + $CellContext`\[Lambda] - 
+                 2 $CellContext`a $CellContext`m $CellContext`\[Omega] + \
+$CellContext`a^2 $CellContext`\[Omega]^2) - 
+                40 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-7) (-$CellContext`a $CellContext`m $CellContext`\
+\[Omega] - 2 $CellContext`a^2 $CellContext`\[Omega]^2 + 
+                 6 $CellContext`M^2 $CellContext`\[Omega]^2 + 
+                 6 $CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] $CellContext`\[Omega]^2)), $CellContext`ck ((-1 + \
+$CellContext`k) $CellContext`k ((
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5))^2 + 
+                  2 ((-6) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-6)) ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + 
+                  2 (7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + 
+                  2 ((-8) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-8)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2))) + $CellContext`k ((
+                    20 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    8 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5)) (
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5)) + ((-30) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    10 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-6)) ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-4)) + ((-6) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-6)) ((-12) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    6 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + (
+                    7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7)) (
+                    6 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    4 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + (
+                    42 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    12 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-3)) + ((-8) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-8)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-2)) + ((-56) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    14 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-8)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2)))) + 
+              Complex[0, -2] $CellContext`ck $CellContext`k ((-8) \
+$CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-9) + 
+                2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-8)) $CellContext`\[Gamma] + $CellContext`ck (
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-3) ((-2) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]) (
+                  70 (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                  20 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-7)) - 
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-4) ((-3) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2]) ((-40) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7) + 
+                 10 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-6)) - 
+                4 (-$CellContext`a^2 + $CellContext`M^2)^
+                 Rational[
+                  1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) (
+                 5 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                 6 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-7) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 ((-8) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5) + ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-4)) ((-4) $CellContext`M ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                 5 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-6) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 (20 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-5)) (
+                 3 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-5) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                70 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[1, 2])^(-6) $CellContext`\[Omega]^2 - 
+                224 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-8) $CellContext`\[Omega] (-$CellContext`a \
+$CellContext`m + 
+                 2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2]) $CellContext`\[Omega]) + 
+                84 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-10) (-$CellContext`a $CellContext`m + 
+                   2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2]) $CellContext`\[Omega])^2 - ((-112) \
+(-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-9) + 
+                 35 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-8)) (
+                 2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-2) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])) + $CellContext`\[Lambda] - 
+                 2 $CellContext`a $CellContext`m $CellContext`\[Omega] + \
+$CellContext`a^2 $CellContext`\[Omega]^2) + 
+                70 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-8) (-$CellContext`a $CellContext`m $CellContext`\
+\[Omega] - 2 $CellContext`a^2 $CellContext`\[Omega]^2 + 
+                  6 $CellContext`M^2 $CellContext`\[Omega]^2 + 
+                  6 $CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2] $CellContext`\[Omega]^2)), $CellContext`ck \
+($CellContext`k (((-6) $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6)) (
+                    20 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    8 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5)) + ((-30) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    10 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6)) (
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5)) + (
+                    42 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    12 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-7)) ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + (
+                    
+                    7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-7)) ((-12) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    6 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-4)) + ((-8) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8)) (
+                    6 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    4 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-3)) + ((-56) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    14 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + (
+                    72 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                    16 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-9)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2)) + (
+                    9 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-9)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-2))) + (-1 + $CellContext`k) $CellContext`k (
+                  2 ((-6) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6)) (
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5)) + 
+                  2 (7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-7)) ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + 
+                  2 ((-8) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + 
+                  2 (9 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-9)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2)))) + 
+              Complex[0, -2] $CellContext`ck $CellContext`k (
+                9 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-9)) $CellContext`\[Gamma] + $CellContext`ck (
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-3) ((-2) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2]) ((-112) (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-9) + 
+                  35 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-8)) - 
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-4) ((-3) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]) (
+                 70 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                 20 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-7)) - 
+                4 (-$CellContext`a^2 + $CellContext`M^2)^
+                 Rational[
+                  1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-4) ((-6) $CellContext`M ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                 7 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-8) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 ((-8) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5) + ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) (
+                 5 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                 6 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-7) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 (20 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-5)) ((-4) $CellContext`M ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                 5 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-6) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 ((-40) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7) + 
+                 10 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-6)) (
+                 3 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-5) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) + 
+                120 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-7) $CellContext`\[Omega]^2 + 
+                336 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-9) $CellContext`\[Omega] (-$CellContext`a \
+$CellContext`m + 
+                  2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2]) $CellContext`\[Omega]) - 
+                120 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[1, 2])^(-11) (-$CellContext`a $CellContext`m + 
+                  2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2]) $CellContext`\[Omega])^2 - (
+                 168 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                 56 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-9)) (
+                 2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-2) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])) + $CellContext`\[Lambda] - 
+                 2 $CellContext`a $CellContext`m $CellContext`\[Omega] + \
+$CellContext`a^2 $CellContext`\[Omega]^2) - 
+                112 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-9) (-$CellContext`a $CellContext`m $CellContext`\
+\[Omega] - 2 $CellContext`a^2 $CellContext`\[Omega]^2 + 
+                 6 $CellContext`M^2 $CellContext`\[Omega]^2 + 
+                 6 $CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] $CellContext`\[Omega]^2)), $CellContext`ck ((-1 + \
+$CellContext`k) $CellContext`k (((-6) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6))^2 + 
+                  2 (7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7)) (
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5)) + 
+                  2 ((-8) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-8)) ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + 
+                  2 (9 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-9)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + 
+                  2 ((-10) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-11) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-10)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-2))) + $CellContext`k (((-6) $CellContext`a^2 \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-6)) ((-30) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    10 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6)) + (
+                    7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7)) (
+                    20 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    8 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5)) + (
+                    42 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    12 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7)) (
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5)) + ((-56) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    14 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-8)) ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-4)) + ((-8) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-8)) ((-12) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    6 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + (
+                    9 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-9)) (
+                    6 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    4 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + (
+                    72 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                    16 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-9)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-3)) + ((-10) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-11) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-10)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-2)) + ((-90) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-11) + 
+                    18 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-10)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2)))) + 
+              Complex[0, -2] $CellContext`ck $CellContext`k ((-10) \
+$CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-11) + 
+                2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-10)) $CellContext`\[Gamma] + $CellContext`ck (
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-3) ((-2) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]) (
+                  168 (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                  56 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-9)) - 
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-4) ((-3) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2]) ((-112) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-9) + 
+                 35 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-8)) - 
+                4 (-$CellContext`a^2 + $CellContext`M^2)^
+                 Rational[
+                  1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) (
+                 7 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                 8 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 
+                    2])^(-9) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 ((-8) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5) + ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-4)) ((-6) $CellContext`M ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                 7 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-8) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 (20 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-5)) (
+                 5 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                 6 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-7) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 ((-40) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7) + 
+                 10 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-6)) ((-4) $CellContext`M ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                 5 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-6) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 (70 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                 20 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-7)) (
+                 3 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-5) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                189 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[1, 2])^(-8) $CellContext`\[Omega]^2 - 
+                480 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-10) $CellContext`\[Omega] (-$CellContext`a \
+$CellContext`m + 
+                 2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2]) $CellContext`\[Omega]) + 
+                165 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-12) (-$CellContext`a $CellContext`m + 
+                   2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2]) $CellContext`\[Omega])^2 - ((-240) \
+(-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-11) + 
+                 84 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-10)) (
+                 2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-2) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])) + $CellContext`\[Lambda] - 
+                 2 $CellContext`a $CellContext`m $CellContext`\[Omega] + \
+$CellContext`a^2 $CellContext`\[Omega]^2) + 
+                168 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-10) (-$CellContext`a $CellContext`m \
+$CellContext`\[Omega] - 2 $CellContext`a^2 $CellContext`\[Omega]^2 + 
+                  6 $CellContext`M^2 $CellContext`\[Omega]^2 + 
+                  6 $CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2] $CellContext`\[Omega]^2)), $CellContext`ck \
+($CellContext`k ((
+                    42 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    12 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-7)) ((-6) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6)) + (
+                    7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-7)) ((-30) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    10 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-6)) + ((-8) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8)) (
+                    20 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    8 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5)) + ((-56) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    14 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8)) (
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5)) + (
+                    72 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                    16 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-9)) ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + (
+                    9 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-9)) ((-12) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    6 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-4)) + ((-10) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-11) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10)) (
+                    6 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    4 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-3)) + ((-90) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-11) + 
+                    18 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + (
+                    110 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-12) - 
+                    20 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-11)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2)) + (
+                    11 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-12) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-11)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-2))) + (-1 + $CellContext`k) $CellContext`k (
+                  2 (7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-7)) ((-6) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6)) + 
+                  2 ((-8) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8)) (
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5)) + 
+                  2 (9 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-9)) ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + 
+                  2 ((-10) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-11) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + 
+                  2 (11 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-12) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-11)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2)))) + 
+              Complex[0, -2] $CellContext`ck $CellContext`k (
+                11 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-12) - 
+                2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-11)) $CellContext`\[Gamma] + $CellContext`ck (
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-3) ((-2) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2]) ((-240) (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-11) + 
+                  84 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-10)) - 
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-4) ((-3) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]) (
+                 168 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                 56 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-9)) - 
+                4 (-$CellContext`a^2 + $CellContext`M^2)^
+                 Rational[
+                  1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-4) ((-8) $CellContext`M ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                 9 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-10) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 ((-8) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5) + ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) (
+                 7 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                 8 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-9) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 (20 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-5)) ((-6) $CellContext`M ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                 7 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-8) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 ((-40) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7) + 
+                 10 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-6)) (
+                 5 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                 6 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-7) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 (70 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                 20 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-7)) ((-4) $CellContext`M ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                 5 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-6) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 ((-112) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-9) + 
+                 35 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-8)) (
+                 3 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-5) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) + 
+                280 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-9) $CellContext`\[Omega]^2 + 
+                660 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-11) $CellContext`\[Omega] (-$CellContext`a \
+$CellContext`m + 
+                  2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2]) $CellContext`\[Omega]) - 
+                220 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[1, 2])^(-13) (-$CellContext`a $CellContext`m + 
+                  2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2]) $CellContext`\[Omega])^2 - (
+                 330 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-12) - 
+                 120 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-11)) (
+                 2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-2) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])) + $CellContext`\[Lambda] - 
+                 2 $CellContext`a $CellContext`m $CellContext`\[Omega] + \
+$CellContext`a^2 $CellContext`\[Omega]^2) - 
+                240 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-11) (-$CellContext`a $CellContext`m \
+$CellContext`\[Omega] - 2 $CellContext`a^2 $CellContext`\[Omega]^2 + 
+                 6 $CellContext`M^2 $CellContext`\[Omega]^2 + 
+                 6 $CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] $CellContext`\[Omega]^2)), $CellContext`ck ((-1 + \
+$CellContext`k) $CellContext`k ((
+                    7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7))^2 + 
+                  2 ((-8) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-8)) ((-6) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6)) + 
+                  2 (9 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-9)) (
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5)) + 
+                  2 ((-10) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-11) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-10)) ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + 
+                  2 (11 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-12) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-11)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + 
+                  2 ((-12) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-13) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-12)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2))) + $CellContext`k ((
+                    42 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    12 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7)) (
+                    7 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-7)) + ((-56) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    14 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-8)) ((-6) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-6)) + ((-8) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-8)) ((-30) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                    10 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6)) + (
+                    9 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-9)) (
+                    20 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    8 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-5)) + (
+                    72 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                    16 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-9)) (
+                    5 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5)) + ((-90) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-11) + 
+                    18 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-10)) ((-4) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-4)) + ((-10) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-11) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-10)) ((-12) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                    6 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4)) + (
+                    11 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-12) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-11)) (
+                    6 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    4 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-3)) + (
+                    110 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-12) - 
+                    20 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-11)) (
+                    3 $CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-3)) + ((-12) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-13) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-12)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-2)) + ((-132) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-13) + 
+                    22 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-12)) ((-2) $CellContext`a^2 ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-3) + 
+                    2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-2)))) + 
+              Complex[0, -2] $CellContext`ck $CellContext`k ((-12) \
+$CellContext`a^2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-13) + 
+                2 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-12)) $CellContext`\[Gamma] + $CellContext`ck (
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-3) ((-2) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]) (
+                  330 (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-12) - 
+                  120 ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-11)) - 
+                2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-4) ((-3) $CellContext`a^2 + $CellContext`M^2 + \
+$CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2]) ((-240) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-11) + 
+                 84 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-10)) - 
+                4 (-$CellContext`a^2 + $CellContext`M^2)^
+                 Rational[
+                  1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) (
+                 9 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                 10 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-11) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 ((-8) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-5) + ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2])^(-4)) ((-8) $CellContext`M ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-9) + 
+                 9 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-10) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 (20 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-5)) (
+                 7 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                 8 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-9) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 ((-40) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-7) + 
+                 10 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-6)) ((-6) $CellContext`M ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-7) + 
+                 7 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-8) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 (70 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-8) - 
+                 20 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-7)) (
+                 5 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-6) - 
+                 6 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-7) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 ((-112) (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-9) + 
+                 35 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-8)) ((-4) $CellContext`M ($CellContext`M + \
+(-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2])^(-5) + 
+                 5 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-6) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                2 (168 (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-10) - 
+                 56 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-9)) (
+                 3 $CellContext`M ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-4) - 
+                 4 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-5) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^Rational[1, 2]))) - 
+                396 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[1, 2])^(-10) $CellContext`\[Omega]^2 - 
+                880 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2])^(-12) $CellContext`\[Omega] (-$CellContext`a \
+$CellContext`m + 
+                 2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2]) $CellContext`\[Omega]) + 
+                286 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-14) (-$CellContext`a $CellContext`m + 
+                   2 ($CellContext`M^2 + $CellContext`M (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[
+                    1, 2]) $CellContext`\[Omega])^2 - ((-440) \
+(-$CellContext`a^2 + $CellContext`M^2)^
+                   Rational[
+                    1, 2] ($CellContext`M + (-$CellContext`a^2 + \
+$CellContext`M^2)^Rational[1, 2])^(-13) + 
+                 165 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])^(-12)) (
+                 2 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-2) (-$CellContext`a^2 + $CellContext`M \
+($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2])) + $CellContext`\[Lambda] - 
+                 2 $CellContext`a $CellContext`m $CellContext`\[Omega] + \
+$CellContext`a^2 $CellContext`\[Omega]^2) + 
+                330 ($CellContext`M + (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[
+                    1, 2])^(-12) (-$CellContext`a $CellContext`m \
+$CellContext`\[Omega] - 2 $CellContext`a^2 $CellContext`\[Omega]^2 + 
+                  6 $CellContext`M^2 $CellContext`\[Omega]^2 + 
+                  6 $CellContext`M (-$CellContext`a^2 + $CellContext`M^2)^
+                    Rational[1, 2] $CellContext`\[Omega]^2))}, 0, 11, 1],
+            Editable->False], ")"}]}],
+         Short[#, 5]& ],
+        BaseStyle->{Deployed -> False},
+        StripOnInput->False]},
+      {GridBox[{
+         {
+          PaneBox[
+           TagBox[
+            TooltipBox[
+             StyleBox[
+              StyleBox[
+               DynamicBox[ToBoxes[
+                 FEPrivate`FrontEndResource[
+                 "FEStrings", "sizeBriefExplanation"], StandardForm],
+                ImageSizeCache->{49., {2., 7.}}],
+               StripOnInput->False,
+               DynamicUpdating->True,
+               LineSpacing->{1, 2},
+               LineIndent->0,
+               LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLText",
+              StripOnInput->False],
+             StyleBox[
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"], 
+                StandardForm]], DynamicUpdating -> True, LineIndent -> 0, 
+              LinebreakAdjustments -> {1., 100, 0, 0, 0}, 
+              LineSpacing -> {1, 2}, StripOnInput -> False]],
+            Annotation[#, 
+             Style[
+              Dynamic[
+               FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"]], 
+              DynamicUpdating -> True, LineIndent -> 0, 
+              LinebreakAdjustments -> {1., 100, 0, 0, 0}, 
+              LineSpacing -> {1, 2}], "Tooltip"]& ],
+           Alignment->Center,
+           BaselinePosition->Baseline,
+           ImageSize->{Automatic, {25, Full}}], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm],
+               ImageSizeCache->{40., {1., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            OutputSizeLimit`Defer, 57, 34212355992483567767, 5/2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm],
+               ImageSizeCache->{46.5, {1., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm],
+               ImageSizeCache->{46.5, {1., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            OutputSizeLimit`Defer, 57, 34212355992483567767, 5 2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm],
+               ImageSizeCache->{34.5, {1., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            OutputSizeLimit`Defer, 57, 34212355992483567767, Infinity],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm],
+               ImageSizeCache->{60., {1., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           ButtonFunction:>FrontEndExecute[{
+              FrontEnd`SetOptions[
+              FrontEnd`$FrontEnd, 
+               FrontEnd`PreferencesSettings -> {"Page" -> "Advanced"}], 
+              FrontEnd`FrontEndToken["PreferencesDialog"]}],
+           Evaluator->None,
+           Method->"Preemptive"]}
+        },
+        AutoDelete->False,
+        FrameStyle->GrayLevel[0.85],
+        GridBoxDividers->{"Columns" -> {False, {True}}},
+        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+        GridBoxSpacings->{"Columns" -> {{2}}}]}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+     GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{1.}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], 
+         Offset[1.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    BaseStyle->"OutputSizeLimit",
+    FrameMargins->{{12, 12}, {0, 15}},
+    FrameStyle->GrayLevel[0.85],
+    RoundingRadius->5,
+    StripOnInput->False],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  If[34212355992483567767 === $SessionID, 
+   Out[57], Message[
+     MessageName[Syntax, "noinfoker"]]; Missing["NotAvailable"]; 
+   Null]]], "Output",
+ CellChangeTimes->{{3.8442524880713124`*^9, 3.844252491718683*^9}, {
+  3.8442528682289286`*^9, 3.844252881101317*^9}},
+ CellLabel->"Out[57]=",ExpressionUUID->"dba35501-3f5e-4328-813d-3fcbab3cb236"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{960, 484},
+WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 18, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"79280963-56a5-46d1-996c-20392927f0a2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 312, 8, 97, "Title",ExpressionUUID->"dfc09d30-3028-41a5-8648-76f521d576d6"],
+Cell[895, 32, 2256, 69, 97, "Input",ExpressionUUID->"180317a5-e365-42ad-a162-a814f2135b30"],
+Cell[CellGroupData[{
+Cell[3176, 105, 319, 6, 28, "Input",ExpressionUUID->"6ca30c23-158e-4940-8716-61f14ed8d742"],
+Cell[3498, 113, 1233, 34, 35, "Output",ExpressionUUID->"321fa4d2-e37b-40d2-bfb5-c54f5b0bdf68"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4768, 152, 1163, 30, 70, "Input",ExpressionUUID->"592dec14-efe2-4fed-bd8b-aa3c68c6fdbc"],
+Cell[5934, 184, 3067, 86, 156, "Output",ExpressionUUID->"52293305-e161-432d-b08e-d0f802aad1da"]
+}, Open  ]],
+Cell[9016, 273, 3263, 95, 158, "Input",ExpressionUUID->"b231f3a5-5455-4100-9995-822fab092f2c"],
+Cell[12282, 370, 652, 17, 48, InheritFromParent,ExpressionUUID->"d57fafc5-f3b1-4d6b-9db9-79e9e85a63d8"],
+Cell[CellGroupData[{
+Cell[12959, 391, 4634, 125, 213, "Input",ExpressionUUID->"a9bbfa49-3571-4a3b-9362-3eb941f7b879"],
+Cell[17596, 518, 3016, 61, 96, "Output",ExpressionUUID->"b678e637-dc4b-4b7a-9edb-ddc4b1cb7641"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20649, 584, 317, 8, 52, "Subtitle",ExpressionUUID->"95c23345-4577-4e6a-8cef-6b5cc6da73cb"],
+Cell[20969, 594, 313, 6, 28, "Input",ExpressionUUID->"29e2b8a6-79b4-4589-8a8d-8ce350241031"],
+Cell[21285, 602, 553, 13, 32, "Input",ExpressionUUID->"42dd32b0-b764-4639-ad30-8307ba320139"],
+Cell[21841, 617, 1099, 33, 95, "Input",ExpressionUUID->"ed7e64a4-6634-4565-a150-51a87bb39a73"],
+Cell[22943, 652, 1778, 54, 54, "Input",ExpressionUUID->"7bcb3525-bc93-4d70-b5d3-549ef000d6f9"],
+Cell[CellGroupData[{
+Cell[24746, 710, 2206, 54, 74, "Input",ExpressionUUID->"e0676aff-6f0a-4a15-89e2-bcbdb72a9134"],
+Cell[26955, 766, 5013, 156, 190, "Output",ExpressionUUID->"047ff58b-d45f-4739-b5c4-f15f0c48c300"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32005, 927, 207, 4, 28, "Input",ExpressionUUID->"bcfeb443-199c-4296-9a95-29bf4052aca0"],
+Cell[32215, 933, 109387, 1950, 114, "Output",ExpressionUUID->"dba35501-3f5e-4328-813d-3fcbab3cb236"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
